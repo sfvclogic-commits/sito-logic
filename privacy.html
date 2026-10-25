@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy e cookie — LOGIC</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2300d6c3'/%3E%3Cpath fill='%23ff3d2b' d='M24 6c1.8 11.3 6.5 16.1 18 18-11.5 1.9-16.2 6.7-18 18-1.8-11.3-6.5-16.1-18-18 11.5-1.9 16.2-6.7 18-18Z'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,500;1,700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --tq:#00d6c3; --co:#ff3d2b; --co2:#d42a17; --ink:#04302b; --cream:#fff3ea }
+  *{ box-sizing:border-box; margin:0 }
+  body{ font-family:'Onest',system-ui,sans-serif; background:var(--cream); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased }
+  a{ color:var(--co2); text-underline-offset:3px }
+  .top{ background:var(--tq); border-radius:0 0 2rem 2rem; padding:1.25rem 1rem 3.5rem }
+  .wrap{ max-width:46rem; margin:0 auto; padding-inline:1rem }
+  .bar{ display:flex; justify-content:space-between; align-items:center; gap:1rem }
+  .brand{ font-weight:900; font-size:1.25rem; letter-spacing:-.03em; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:.45rem }
+  .brand i{ width:1.1rem; height:1.1rem; background:var(--co); -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z'/%3E%3C/svg%3E") center/contain no-repeat; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z'/%3E%3C/svg%3E") center/contain no-repeat }
+  .back{ background:var(--ink); color:#fff; text-decoration:none; border-radius:999px; padding:.55rem 1.1rem; font-size:.875rem; font-weight:700 }
+  h1{ margin-top:2.5rem; font-size:clamp(2.2rem,7vw,3.75rem); line-height:1.02; letter-spacing:-.035em; font-weight:900 }
+  h1 em{ font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:var(--co); letter-spacing:-.01em }
+  .lead{ margin-top:1rem; font-size:1.0625rem; max-width:40ch }
+  main{ padding:3rem 0 4rem }
+  section{ padding:1.75rem 0; border-top:1.5px solid rgba(4,48,43,.15) }
+  section:first-child{ border-top:0; padding-top:0 }
+  h2{ font-size:1.375rem; letter-spacing:-.02em; font-weight:900; margin-bottom:.6rem }
+  h2 span{ color:var(--co); font-family:'Playfair Display',serif; font-style:italic; font-weight:700; margin-right:.35rem }
+  p + p, p + ul, ul + p{ margin-top:.75rem }
+  ul{ padding-left:1.2rem }
+  li + li{ margin-top:.35rem }
+  .card{ background:#fff; border-radius:1.25rem; padding:1.25rem 1.4rem; box-shadow:0 1px 0 rgba(4,48,43,.08) }
+  table{ width:100%; border-collapse:collapse; font-size:.9375rem; margin-top:.75rem }
+  th, td{ text-align:left; padding:.6rem .5rem; border-bottom:1px solid rgba(4,48,43,.12); vertical-align:top }
+  th{ font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:rgba(4,48,43,.6) }
+  .tag{ display:inline-block; background:var(--tq); border-radius:999px; padding:.1rem .6rem; font-size:.75rem; font-weight:700 }
+  .reset{ margin-top:1rem; background:var(--co); color:#fff; border:0; border-radius:999px; padding:.65rem 1.2rem; font:inherit; font-weight:700; cursor:pointer }
+  footer{ background:var(--co); color:var(--ink); border-radius:2rem 2rem 0 0; padding:2rem 1rem; font-size:.875rem }
+  @media (max-width:560px){ table, thead, tbody, tr, th, td{ display:block } thead{ display:none } td{ border:0; padding:.15rem 0 } tr{ padding:.75rem 0; border-bottom:1px solid rgba(4,48,43,.12) } td:first-child{ font-weight:700 } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="index.html"><i aria-hidden="true"></i>LOGIC</a>
+      <a class="back" href="index.html">← Torna al sito</a>
+    </div>
+    <h1>Privacy <em>e</em> cookie</h1>
+    <p class="lead">Come trattiamo i tuoi dati quando visiti lunelogic.it o ci scrivi. In breve: pochi dati, solo per risponderti, nessun tracciamento.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2><span>01</span>Chi è il titolare</h2>
+    <div class="card">
+      <p><b>LOGIC</b>, agenzia creativa di comunicazione digitale di Stefano e Virginia.<br>
+      Email: <a href="mailto:sf.vc.logic@gmail.com">sf.vc.logic@gmail.com</a><br>
+      Sito: lunelogic.it</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>02</span>Quali dati raccogliamo</h2>
+    <ul>
+      <li><b>Modulo "Parliamone":</b> nome, email, nome dell'attività, servizi che ti interessano, il tuo messaggio ed eventuali link che ci mandi.</li>
+      <li><b>Prenotazione della videochiamata:</b> avviene sulla pagina di Google Calendar, dove inserisci nome, email e l'orario scelto.</li>
+      <li><b>Dati tecnici di navigazione:</b> come su ogni sito, i server che ospitano la pagina registrano l'indirizzo IP e il tipo di browser per farla funzionare e proteggerla.</li>
+    </ul>
+    <p>Non usiamo strumenti di statistica, pubblicità o profilazione.</p>
+  </section>
+
+  <section>
+    <h2><span>03</span>Perché e su quale base</h2>
+    <ul>
+      <li>Per <b>risponderti</b>, mandarti il riepilogo della richiesta, organizzare la videochiamata e prepararti una proposta. Base: la tua richiesta, cioè misure precontrattuali (art. 6.1.b GDPR).</li>
+      <li>Per <b>far funzionare e proteggere il sito</b>. Base: legittimo interesse (art. 6.1.f GDPR).</li>
+    </ul>
+    <p>Non vendiamo né cediamo i tuoi dati a nessuno e non ti iscriviamo a newsletter.</p>
+  </section>
+
+  <section>
+    <h2><span>04</span>Chi ci aiuta</h2>
+    <p>Per far funzionare il sito usiamo alcuni servizi esterni, che trattano i dati solo per conto nostro:</p>
+    <table>
+      <thead><tr><th>Servizio</th><th>A cosa serve</th></tr></thead>
+      <tbody>
+        <tr><td>GitHub Pages</td><td>Ospita il sito.</td></tr>
+        <tr><td>FormSubmit</td><td>Ci inoltra via email le richieste del modulo e ti manda il riepilogo.</td></tr>
+        <tr><td>Google (Gmail, Calendar, Meet)</td><td>Riceviamo le email, gestiamo le prenotazioni e facciamo le videochiamate.</td></tr>
+        <tr><td>Google Fonts, unpkg</td><td>Caricano i caratteri e un piccolo script per lo scorrimento della pagina.</td></tr>
+      </tbody>
+    </table>
+    <p>Alcuni di questi servizi possono trattare dati fuori dall'Unione Europea, con le garanzie previste dal GDPR (clausole contrattuali standard o EU-US Data Privacy Framework).</p>
+  </section>
+
+  <section>
+    <h2><span>05</span>Per quanto tempo</h2>
+    <p>Teniamo le richieste e le email per il tempo necessario a seguirti e al massimo per 24 mesi dall'ultimo contatto, a meno che non diventi nostro cliente: in quel caso valgono i tempi previsti dalla legge per contratti e fatture.</p>
+  </section>
+
+  <section id="cookie">
+    <h2><span>06</span>Cookie</h2>
+    <p>Il sito <b>non usa cookie di profilazione, pubblicità o statistica</b>. Usa solo una piccola memoria tecnica del browser:</p>
+    <table>
+      <thead><tr><th>Nome</th><th>Tipo</th><th>A cosa serve</th><th>Durata</th></tr></thead>
+      <tbody>
+        <tr><td>logic-cookie-ok</td><td><span class="tag">Tecnico</span></td><td>Ricorda che hai chiuso il banner, per non mostrartelo ogni volta.</td><td>Finché non la cancelli</td></tr>
+      </tbody>
+    </table>
+    <p>I cookie tecnici non richiedono consenso. Se apri la pagina di prenotazione di Google Calendar o un video di Google Meet, valgono le regole di Google su quel sito.</p>
+    <button class="reset" id="reset" type="button">Mostrami di nuovo il banner</button>
+  </section>
+
+  <section>
+    <h2><span>07</span>I tuoi diritti</h2>
+    <p>Puoi chiederci in qualsiasi momento di vedere, correggere o cancellare i tuoi dati, limitarne l'uso, opporti al trattamento o riceverli in un formato leggibile (artt. 15–22 GDPR). Basta scrivere a <a href="mailto:sf.vc.logic@gmail.com">sf.vc.logic@gmail.com</a>: ti rispondiamo entro 30 giorni.</p>
+    <p>Se pensi che i tuoi dati non siano trattati correttamente puoi rivolgerti al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+  </section>
+
+  <section>
+    <p style="font-size:.875rem;opacity:.7">Ultimo aggiornamento: 23 ottobre 2026.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 LOGIC · <a href="index.html" style="color:inherit">lunelogic.it</a></div></footer>
+<script>
+document.getElementById('reset').addEventListener('click', function(){
+  try { localStorage.removeItem('logic-cookie-ok'); } catch(e){}
+  location.href = 'index.html';
+});
+</script>
+</body>
+</html>
