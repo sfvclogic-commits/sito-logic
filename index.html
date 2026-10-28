@@ -1070,7 +1070,7 @@ body::after{ opacity:.09 }
         <li><button data-nav="home" aria-current="page"><span data-h="y=-2;o=.8" data-hs="320,22">Home</span></button></li>
         <li><button data-nav="works"><span data-h="y=-2;o=.8" data-hs="320,22">Lavori</span></button></li>
         <li><button data-nav="services"><span data-h="y=-2;o=.8" data-hs="320,22">Servizi <span class="caret" aria-hidden="true">▾</span></span></button></li>
-        <li><button data-nav="about"><span data-h="y=-2;o=.8" data-hs="320,22">Chi siamo</span></button></li>
+        <li><button data-nav="about"><span data-h="y=-2;o=.8" data-hs="320,22">Chi sono</span></button></li>
         <li><button data-nav="settori"><span data-h="y=-2;o=.8" data-hs="320,22">Settori</span></button></li>
         <li><button data-nav="contact"><span data-h="y=-2;o=.8" data-hs="320,22">Contatti</span></button></li>
       </ul>
@@ -1182,7 +1182,7 @@ body::after{ opacity:.09 }
         <h2 class="words">Aiutiamo agriturismi, hotel e attività a farsi trovare e scegliere, con <span class="muted"><span class="f1 c-co2">branding,</span> <span class="f2 c-tq">web design &amp; development,</span> <span class="f3 c-co">social media marketing</span> <span class="f4 c-ink">e</span> <span class="f1 c-tq">foto e video production</span> <span class="f2 c-ink">pensati</span> <span class="f3 c-co">su misura.</span></span></h2>
         <div class="about__foot rv" style="--ry:12px;--rdl:200ms">
           <a class="pill pill--outline has-arrow" href="#chi-siamo" data-open-team data-hroot>
-            <span class="pill__in" data-h="s=1.04" data-hs="320,18" data-ht>Chi siamo <span class="pill__badge"><svg class="i" data-h="x=3" data-hs="320,18" data-ht><use href="#i-arrow"/></svg></span></span>
+            <span class="pill__in" data-h="s=1.04" data-hs="320,18" data-ht>Chi sono <span class="pill__badge"><svg class="i" data-h="x=3" data-hs="320,18" data-ht><use href="#i-arrow"/></svg></span></span>
           </a>
         </div>
       </div>
@@ -1271,7 +1271,7 @@ body::after{ opacity:.09 }
       <div class="footer__col">
         <p class="footer__title">Agenzia</p>
         <ul>
-          <li><a class="alink" href="#about"><span data-h="x=4;o=.65" data-hs="320,22">Chi siamo</span></a></li>
+          <li><a class="alink" href="#about"><span data-h="x=4;o=.65" data-hs="320,22">Chi sono</span></a></li>
           <li><a class="alink" href="#works"><span data-h="x=4;o=.65" data-hs="320,22">Lavori</span></a></li>
           <li><a class="alink" href="#settori"><span data-h="x=4;o=.65" data-hs="320,22">Settori</span></a></li>
           <li><a class="alink" href="#contact" data-open-modal><span data-h="x=4;o=.65" data-hs="320,22">Contatti</span></a></li>
@@ -1324,7 +1324,7 @@ body::after{ opacity:.09 }
 <!-- ======================= RequestModal ======================= -->
 
 <!-- ======================= Chi siamo (slides in) ======================= -->
-<section class="team" id="team" aria-label="Chi siamo" hidden>
+<section class="team" id="team" aria-label="Chi sono" hidden>
   <button type="button" class="team__back" id="teamBack"><span aria-hidden="true">←</span> Torna al sito</button>
   <div class="team__grid">
     <div class="team__photo team__photo--vid">
@@ -1332,14 +1332,13 @@ body::after{ opacity:.09 }
       <button type="button" class="team__sound" id="teamSound" aria-pressed="false">Attiva audio</button>
     </div>
     <div>
-      <p class="team__kicker">Chi siamo</p>
-      <h2><b class="g">Siamo</b> <em>Stefano</em><br><span class="s">e</span> <em>Virginia.</em></h2>
+      <p class="team__kicker">Chi sono</p>
+      <h2><b class="g">Sono</b> <em>Stefano.</em></h2>
       <div class="team__text">
-        <p>Lavoriamo con poche attività alla volta, così ognuna ha la nostra attenzione. Vi seguiamo noi, dall'idea al risultato: niente intermediari.</p>
+        <p>Lavoro con poche attività alla volta, così ognuna ha tutta la mia attenzione. Vi seguo io, dall'idea al risultato: niente intermediari.</p>
       </div>
       <div class="team__people">
-        <div><b>Stefano</b><span>Co-fondatore</span></div>
-        <div><b>Virginia</b><span>Co-fondatrice</span></div>
+        <div><b>Stefano</b><span>Fondatore</span></div>
       </div>
       <button class="pill pill--dark has-arrow" data-hroot data-open-modal>
         <span class="pill__in">Parliamone <span class="pill__badge"><svg class="i"><use href="#i-arrow"/></svg></span></span>
@@ -1464,7 +1463,7 @@ const STATS = [
   { value:20,  suffix:' min', label:'La prima videochiamata, gratuita e senza impegno' },
 ];
 const NAV = [
-  ['Home','home'],['Lavori','works'],['Servizi','services'],['Chi siamo','about'],['Settori','settori'],['Domande','faq'],['Contatti','contact'],
+  ['Home','home'],['Lavori','works'],['Servizi','services'],['Chi sono','about'],['Settori','settori'],['Domande','faq'],['Contatti','contact'],
 ];
 
 const $ = (s, r=document) => r.querySelector(s);
@@ -2421,7 +2420,7 @@ function sendRecap(choice){
   const choiceLine = choice === 'nocall'
     ? 'Hai scelto di sentirci solo via email: va benissimo, ti scriviamo noi.'
     : 'Quando vuoi, puoi prenotare la videochiamata gratuita di 20 minuti' + (BOOKING_URL ? ' da qui: ' + BOOKING_URL : ' rispondendo a questa email.');
-  const recap = `Ciao ${f.nome},\n\ngrazie per averci scritto! Ecco il riepilogo della tua richiesta a LOGIC.\n\nAttività: ${f.attivita || '-'}\nServizi: ${f.servizi || '-'}\nMessaggio: ${f.messaggio}\nLink: ${f.links.join('  ') || '-'}\n\n${choiceLine}\n\nTi rispondiamo entro un giorno lavorativo.\nStefano e Virginia, LOGIC`;
+  const recap = `Ciao ${f.nome},\n\ngrazie per averci scritto! Ecco il riepilogo della tua richiesta a LOGIC.\n\nAttività: ${f.attivita || '-'}\nServizi: ${f.servizi || '-'}\nMessaggio: ${f.messaggio}\nLink: ${f.links.join('  ') || '-'}\n\n${choiceLine}\n\nTi rispondiamo entro un giorno lavorativo.\nStefano, LOGIC`;
   sendMail({ _subject:`${choice === 'nocall' ? 'Niente chiamata' : 'Chiamata più tardi'}: ${f.nome}${f.attivita ? ' (' + f.attivita + ')' : ''}`,
     Scelta: choice === 'nocall' ? 'Niente videochiamata, solo email' : 'Videochiamata più tardi',
     Nome:f.nome, email:f.email, _replyto:f.email, _autoresponse:recap }).catch(() => {});
@@ -2440,7 +2439,7 @@ if (BOOKING_URL) $('#bookCall').href = BOOKING_URL;
 function callInvite(){
   const d = new FormData(form), who = (d.get('nome') || '').trim(), biz = (d.get('attivita') || '').trim();
   const services = d.getAll('servizi').join(', ') + (d.get('altro') ? ' (' + d.get('altro') + ')' : '');
-  const details = `Videochiamata conoscitiva di 20 minuti con Stefano e Virginia di LOGIC.\n\nNome: ${who}\nAttività: ${biz}\nServizi: ${services}\nMessaggio: ${d.get('messaggio') || ''}\n\nAggiungi Google Meet all'invito, scegli giorno e ora e salva: ci arriva subito.`;
+  const details = `Videochiamata conoscitiva di 20 minuti con Stefano di LOGIC.\n\nNome: ${who}\nAttività: ${biz}\nServizi: ${services}\nMessaggio: ${d.get('messaggio') || ''}\n\nAggiungi Google Meet all'invito, scegli giorno e ora e salva: ci arriva subito.`;
   const q = new URLSearchParams({ action:'TEMPLATE', text:`Videochiamata LOGIC${who ? ' × ' + who : ''}`, details, add:LOGIC_EMAIL, crm:'AVAILABLE' });
   return 'https://calendar.google.com/calendar/render?' + q.toString();
 }
