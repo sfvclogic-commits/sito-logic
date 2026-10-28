@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>LOGIC — Agenzia creativa di comunicazione digitale</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2300d6c3'/%3E%3Cpath fill='%23ff3d2b' d='M24 6c1.8 11.3 6.5 16.1 18 18-11.5 1.9-16.2 6.7-18 18-1.8-11.3-6.5-16.1-18-18 11.5-1.9 16.2-6.7 18-18Z'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='70 50 280 316'%3E%3Cpath fill='%23ff3d2b' d='M250 60a150 150 0 1 0 90 250a125 125 0 1 1 -90 -250z'/%3E%3Cpath fill='%2304302b' stroke='%23fff3ea' stroke-width='12' stroke-linejoin='round' paint-order='stroke' d='M292.0 255.0Q290.2 259.8 288.4 266.1Q286.6 272.4 284.79 279.6Q283.29 285.3 280.9 295.95Q278.5 306.6 277.0 318.0Q261.7 317.4 242.95 317.25Q224.2 317.1 209.2 317.1Q201.1 317.1 188.64 317.1Q176.2 317.1 161.35 317.25Q146.5 317.4 131.65 317.54Q116.8 317.7 103.6 318.0L104.8 312.0Q115.0 311.4 120.7 309.6Q126.4 307.8 129.7 302.4Q133.0 297.0 135.7 286.2L175.3 137.4Q178.3 126.3 177.7 121.05Q177.1 115.8 172.45 113.85Q167.8 111.9 157.6 111.6L159.1 105.6Q167.8 105.9 183.25 106.2Q198.7 106.5 215.8 106.5Q230.8 106.5 244.29 106.2Q257.79 105.9 268.29 105.6L266.79 111.6Q256.6 111.9 250.9 113.85Q245.2 115.8 242.04 121.05Q238.89 126.3 235.89 137.4L196.3 286.2Q193.6 297.0 193.89 302.4Q194.2 307.8 198.85 309.45Q203.5 311.1 213.39 311.1H218.8Q229.0 311.1 241.14 305.7Q253.29 300.3 265.15 288.0Q277.0 275.7 285.4 255.0Z'/%3E%3Ccircle cx='318' cy='96' r='20' fill='%2300d6c3'/%3E%3C/svg%3E" />
 <meta property="og:title" content="LOGIC — Diamo luce al tuo brand" />
 <meta property="og:description" content="Branding, web design &amp; development, social media marketing e foto e video production per agriturismi, hotel e attività." />
 <meta property="og:image" content="https://lunelogic.it/video/servizio-panoramica.jpg" />
@@ -99,10 +99,11 @@ html.lenis, html.lenis body{ height:auto }
 .words.in .w{ transform:none; opacity:1 }
 
 
-/* ---------- SFVC monogram (colors via vars so it works on light and dark) ---------- */
-:root{ --m1:#ff5a49; --m2:#ff3d2b; --m3:#b01e10; --m4:#ff3d2b; --m5:#00d6c3; --mbg:#ececec }
-.on-dark{ --m1:#ff9d93; --m2:#ff7a6e; --m3:#efefef; --m4:#ff7a6e; --m5:#00d6c3; --mbg:#171717 }
-.mono{ display:inline-block; height:1em; width:1.51em; flex:none; vertical-align:middle; overflow:visible }
+/* ---------- Logo LUNE LOGIC (colors via vars so it works on light and dark) ---------- */
+/* fondo turchese: stellina crema (la turchese sparirebbe); fondi corallo/scuri: luna crema */
+:root{ --lm:#ff3d2b; --lf:#04302b; --ls:#fff3ea; --lst:#fff3ea }
+.on-dark{ --lm:#fff3ea; --lf:#04302b; --ls:#fff3ea; --lst:#00d6c3 }
+.mono{ display:inline-block; height:1.25em; width:1.11em; flex:none; vertical-align:middle; overflow:visible }
 
 /* Hero: 3D star (moves and takes colour under the cursor) + SF·VC LOGIC lockup */
 .star3d{ position:relative; width:min(78vw,17rem); aspect-ratio:1; touch-action:pan-y; cursor:grab }
@@ -719,7 +720,8 @@ h1 em, h2 em{ font-family:var(--serif); font-style:italic; font-weight:500; colo
 .ht{ position:absolute; inset:0; display:grid; place-items:center; opacity:0; transform:scale(.7) rotate(-8deg); transition:opacity .45s, transform .6s var(--ease-spring) }
 .ht.on{ opacity:1; transform:none }
 .hcard__tile .mono{ width:72%; height:auto; font-size:inherit }
-.hcard__tile{ --m1:#fff; --m2:#fff; --m3:#141414; --m4:#fff; --m5:#00d6c3; --mbg:#ff3d2b }
+.hcard__tile{ --lm:#fff3ea; --lf:#04302b; --ls:#fff3ea; --lst:#00d6c3 }
+.hcard__tile .mono{ width:52% }
 /* landing page: a little page that builds itself */
 .ht-web{ width:66%; height:62%; border-radius:.35rem; background:#fff; padding:.35rem; display:flex; flex-direction:column; gap:.25rem; box-sizing:border-box }
 .ht-web i{ height:.3rem; border-radius:1rem; background:#ff3d2b; width:40% }
@@ -1051,8 +1053,8 @@ body::after{ opacity:.09 }
 
 <!-- SVG icon sprite (all sized 1em, colored by currentColor) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <!-- SF·VC monogram: built by buildMonoSymbol() from the same layout as the hero logo -->
-  <symbol id="i-sfvc" viewBox="0 20 680 450"></symbol>
+  <!-- Logo LUNE LOGIC: luna corallo, L corsiva, stellina turchese (colori via variabili per fondo chiaro/scuro) -->
+  <symbol id="i-sfvc" viewBox="70 50 280 316"><path d="M250 60a150 150 0 1 0 90 250a125 125 0 1 1 -90 -250z" fill="var(--lm)"/><path d="M292.0 255.0Q290.2 259.8 288.4 266.1Q286.6 272.4 284.79 279.6Q283.29 285.3 280.9 295.95Q278.5 306.6 277.0 318.0Q261.7 317.4 242.95 317.25Q224.2 317.1 209.2 317.1Q201.1 317.1 188.64 317.1Q176.2 317.1 161.35 317.25Q146.5 317.4 131.65 317.54Q116.8 317.7 103.6 318.0L104.8 312.0Q115.0 311.4 120.7 309.6Q126.4 307.8 129.7 302.4Q133.0 297.0 135.7 286.2L175.3 137.4Q178.3 126.3 177.7 121.05Q177.1 115.8 172.45 113.85Q167.8 111.9 157.6 111.6L159.1 105.6Q167.8 105.9 183.25 106.2Q198.7 106.5 215.8 106.5Q230.8 106.5 244.29 106.2Q257.79 105.9 268.29 105.6L266.79 111.6Q256.6 111.9 250.9 113.85Q245.2 115.8 242.04 121.05Q238.89 126.3 235.89 137.4L196.3 286.2Q193.6 297.0 193.89 302.4Q194.2 307.8 198.85 309.45Q203.5 311.1 213.39 311.1H218.8Q229.0 311.1 241.14 305.7Q253.29 300.3 265.15 288.0Q277.0 275.7 285.4 255.0Z" fill="var(--lf)" stroke="var(--ls)" stroke-width="12" stroke-linejoin="round" paint-order="stroke"/><circle cx="318" cy="96" r="20" fill="var(--lst)"/></symbol>
   <symbol id="i-logo" viewBox="0 0 48 48"><path fill="currentColor" d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
@@ -1081,7 +1083,7 @@ body::after{ opacity:.09 }
 <header class="header">
   <div class="shell header__bar">
     <button class="brand-btn" data-scroll="home" aria-label="LOGIC — torna su">
-      <span class="brand" data-h="s=1.04" data-hs="320,18"><svg class="mono" viewBox="0 20 680 450" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</span>
+      <span class="brand" data-h="s=1.04" data-hs="320,18"><svg class="mono" viewBox="70 50 280 316" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</span>
     </button>
     <nav class="nav" aria-label="Navigazione principale">
       <ul>
@@ -1148,7 +1150,7 @@ body::after{ opacity:.09 }
         <div class="hcard rv" data-gate style="--ry:16px;--rs:.96;--rdl:400ms">
           <div class="hcard__row" id="hcard">
             <button type="button" class="hcard__tile" aria-label="Scopri il servizio">
-              <span class="ht on" data-k="0"><svg class="mono" viewBox="0 20 680 450" aria-hidden="true"><use href="#i-sfvc"/></svg></span>
+              <span class="ht on" data-k="0"><svg class="mono" viewBox="70 50 280 316" aria-hidden="true"><use href="#i-sfvc"/></svg></span>
               <span class="ht" data-k="1" aria-hidden="true"><span class="ht-web"><i></i><b></b><b></b><em></em></span></span>
               <span class="ht" data-k="2" aria-hidden="true"><span class="ht-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
               <span class="ht" data-k="3" aria-hidden="true"><span class="ht-play"></span></span>
@@ -1283,7 +1285,7 @@ body::after{ opacity:.09 }
 
     <div class="footer__cols">
       <div>
-        <div class="footer__brand on-dark"><svg class="mono" viewBox="0 20 680 450" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</div>
+        <div class="footer__brand on-dark"><svg class="mono" viewBox="70 50 280 316" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</div>
         <p class="footer__tagline">Agenzia creativa di comunicazione digitale: branding, web design &amp; development, social media marketing e foto e video production per attività che vogliono crescere.</p>
       </div>
       <div class="footer__col">
@@ -1327,7 +1329,7 @@ body::after{ opacity:.09 }
 <!-- ======================= NavMenu ======================= -->
 <div class="navmenu" id="navmenu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="shell navmenu__top">
-    <div class="brand on-dark"><svg class="mono" viewBox="0 20 680 450" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</div>
+    <div class="brand on-dark"><svg class="mono" viewBox="70 50 280 316" aria-hidden="true"><use href="#i-sfvc"/></svg> LOGIC</div>
     <button class="close-btn" id="menuClose"><svg class="i"><use href="#i-x"/></svg> Chiudi</button>
   </div>
   <nav class="shell navmenu__nav" aria-label="Menu">
@@ -1520,7 +1522,7 @@ $('#cards').innerHTML = PORTFOLIO.map((p, i) => `
           <span>${p.cat} — ${p.year}</span>
           <span class="card__badge" data-h="r=45;s=1.08" data-hs="280,18" data-ht><svg class="i"><use href="#i-arrow-ur"/></svg></span>
         </div>
-        <div class="card__mark on-dark" aria-hidden="true"><span><svg class="mono" viewBox="0 20 680 450" aria-hidden="true"><use href="#i-sfvc"/></svg><sup>®</sup></span></div>
+        <div class="card__mark on-dark" aria-hidden="true"><span><svg class="mono" viewBox="70 50 280 316" aria-hidden="true"><use href="#i-sfvc"/></svg><sup>®</sup></span></div>
         <div class="card__body">
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
@@ -1863,6 +1865,7 @@ function drawLogo(ctx, mode, x, y, width){
 
 /* Small monogram (header, menu, footer, cards) as an SVG symbol built from the same layout */
 function buildMonoSymbol(){
+  return; // logo ora statico (luna) nel symbol #i-sfvc
   const sym = document.getElementById('i-sfvc'); if (!sym) return;
   const { mono:{ S, F, V, C, dot, Cover } } = layoutLogo();
   const t = (g, v) => `<text x="${g.x.toFixed(1)}" y="${g.y}" fill="var(${v})">${g.ch}</text>`;
@@ -1874,7 +1877,6 @@ function buildMonoSymbol(){
       <circle cx="${dot.dot[0].toFixed(1)}" cy="${dot.dot[1]}" r="${dot.dot[2]}" fill="var(--m5)"/>
     </g>`;
 }
-buildMonoSymbol();
 
 /* =========================================================
    Hero cursor reveal: a thin champagne trail follows the pointer,
@@ -1886,7 +1888,7 @@ buildMonoSymbol();
   const hideBase = () => { base.style.display = 'none'; }; // gradient fallback
   if (base.complete && !base.naturalWidth) hideBase(); else base.addEventListener('error', hideBase);
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  document.fonts?.load(monoFont(100)).then(() => document.fonts.load(wordFont(100))).then(() => buildMonoSymbol()).catch(() => {});
+  document.fonts?.load(monoFont(100)).then(() => document.fonts.load(wordFont(100))).catch(() => {});
   if (reduceMotion){ letterCanvas.remove(); return; }
 
   // "After" art revealed by the soft halo: the second hero photo, or a bordeaux gradient when it can't load
@@ -2648,7 +2650,7 @@ addEventListener('keydown', e => {
    Changes live in this browser (localStorage); "Copia per Claude" copies them as text to send back. */
 (function(){
   const LIST = [
-    ['Etichetta in alto','.hero__eyebrow'],['Stella','#star3d'],['SF·VC LOGIC','.lockup'],
+    ['Etichetta in alto','.hero__eyebrow'],['Stella','#star3d'],['Logo LOGIC','.lockup'],
     ['Titolo','.hero h1'],['Stelline','.rating'],['Bottoni','.cta-row'],['Scheda servizi','.hcard'],['Settori','.partners'],['Barra in basso','.hero__status'],
     ['Globo','.globe'],['Testo chi siamo','.about__right h2'],['Social','.about__foot'],
     ['Riquadro band','.band li'],['Etichetta portfolio','.works .eyebrow'],['Titolo lavori','.works h2'],['Lavoro','.cards > li'],
