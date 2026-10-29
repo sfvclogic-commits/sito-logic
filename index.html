@@ -845,7 +845,7 @@ body::after{ opacity:.09 }
 
 /* Portfolio: motion-graphic videos (one per service) + the first published projects */
 .vids{ width:100%; display:grid; grid-template-columns:1fr; gap:1.25rem; margin-top:1rem }
-@media (min-width:768px){ .vids{ grid-template-columns:1fr 1fr } }
+@media (min-width:768px){ .vids{ grid-template-columns:1fr 1fr } .vids > li:last-child:nth-child(odd){ grid-column:1 / -1 } }
 .vid{ position:relative; display:block; width:100%; aspect-ratio:16/9; border-radius:1.75rem; overflow:hidden; cursor:pointer; text-align:left; color:#04302b; font:inherit; transition:transform .5s var(--ease-spring) }
 .vid:hover{ transform:translateY(-6px) }
 .vid.v0{ background:#ff3d2b; color:#fff } .vid.v1{ background:#fff3ea } .vid.v2{ background:#00d6c3 } .vid.v3{ background:#ffffff }
@@ -1456,6 +1456,7 @@ const VIDEOS = [
   { title:'Web design & development', text:'Siti che trasformano le visite in richieste.', src:'video/servizio-web.mp4', poster:'video/servizio-web.jpg' },
   { title:'Social media marketing', text:'Contenuti che si notano.', src:'video/servizio-social.mp4', poster:'video/servizio-social.jpg' },
   { title:'Foto e video production', text:'Immagini che raccontano la tua attività.', src:'video/servizio-foto.mp4', poster:'video/servizio-foto.jpg' },
+  { title:'Motion graphic', text:'Contenuti animati su misura, come questi video.', src:'video/servizio-panoramica.mp4', poster:'video/servizio-panoramica.jpg' },
 ];
 // Published work: names, links and short descriptions to be filled in
 const PORTFOLIO = [
