@@ -1349,7 +1349,6 @@ body::after{ opacity:.09 }
   <div class="team__grid">
     <div class="team__photo team__photo--vid">
       <video id="teamVid" muted loop playsinline preload="none" poster="video/servizio-panoramica.jpg" src="video/servizio-panoramica.mp4" aria-label="Video: cosa facciamo in 30 secondi"></video>
-      <button type="button" class="team__sound" id="teamSound" aria-pressed="false">Attiva audio</button>
     </div>
     <div>
       <p class="team__kicker">Chi sono</p>
@@ -2473,7 +2472,7 @@ function openTeam(){ const tv = $('#teamVid'); if (tv && !reduceMotion) setTimeo
 function closeTeam(){ $('#teamVid')?.pause(); team.classList.remove('open'); document.documentElement.classList.remove('team-open'); startScroll(); setTimeout(() => { team.hidden = true; }, reduceMotion ? 0 : 800); }
 $$('[data-open-team]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openTeam(); }));
 $('#teamBack').addEventListener('click', closeTeam);
-$('#teamSound').addEventListener('click', e => { const v = $('#teamVid'), on = v.muted; v.muted = !on; if (on){ v.currentTime = 0; v.play().catch(() => {}); } e.currentTarget.textContent = on ? 'Togli audio' : 'Attiva audio'; e.currentTarget.setAttribute('aria-pressed', on); });
+$('#teamSound')?.addEventListener('click', e => { const v = $('#teamVid'), on = v.muted; v.muted = !on; if (on){ v.currentTime = 0; v.play().catch(() => {}); } e.currentTarget.textContent = on ? 'Togli audio' : 'Attiva audio'; e.currentTarget.setAttribute('aria-pressed', on); });
 team.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', () => { closeTeam(); }));
 form.addEventListener('submit', e => {
   e.preventDefault();
