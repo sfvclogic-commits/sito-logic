@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lunelogic.it/sitemap.xml
+
+Disallow: /esempi/
